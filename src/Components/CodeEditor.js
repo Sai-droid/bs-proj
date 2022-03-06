@@ -1,9 +1,11 @@
 import React from "react";
 import "./CreateRoom.css";
-
+import {NavLink} from 'react-router-dom'
 function CodeEditor() {
   return (
+      
     <div className="code-edit">
+        
       <div className="code-editor">
           <h3>question:</h3>
          
@@ -50,6 +52,7 @@ function CodeEditor() {
             <label>say hi!</label>
             <input type="text"></input>
             <button>send</button>
+            <NavLink exact to ="/" > <button>end</button></NavLink>
           </form>
         </div>
       </div>
