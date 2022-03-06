@@ -1,21 +1,33 @@
-import './App.css';
-import CreateRoom from './Components/CreateRoom';
-import React,{useState} from 'react';
+import "./App.css";
+import CreateRoom from "./Components/CreateRoom";
+import React, { useState } from "react";
+import CodeEditor from "./Components/CodeEditor";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
-  const [toggle,setToggle] = useState(false);
-
-  const ontoggle = () =>{
-    setToggle(!toggle);
-  }
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {toggle && <CreateRoom />}
-       <button  onClick ={ontoggle}>create room</button>
-      </header>
+     
+      <Routes>
+         <Route  exact path="/" element = {<PublicPage/>}/>
+        <Route exact path="/goto" element={<CodeEditor />} />
+      </Routes>
     </div>
   );
 }
 
-export default App;
+const PublicPage = () => {
+  const [toggle,setToggle] = useState(false);
+  const ontoggle =() =>{
+    setToggle(!toggle);
+  }
+  return (
+    <>
+     <header className="App-header">
+     {toggle && <CreateRoom toggle={ontoggle} />}
+      <button onClick={ontoggle}>create room</button>
+      </header>
+      
+    </>
+  );
+};

@@ -1,4 +1,4 @@
-.createRoom{
+.create{
     display:flex;
     flex-direction:column;
     width:500px;
@@ -7,4 +7,27 @@
     border-radius: 5%;
     align-items: inherit;
 }
+.cancel-button{
+    display: flex;
+    flex-direction: column;
+}
 
+.code-editor{
+    display:flex;
+    height: 1000px;
+    width: 500px;
+    border: 1px solid black;
+    padding:20px 20px 20px 20px;
+}
+.code-edit{
+    display:flex;
+    flex-direction: row;
+    padding:5px 5px;
+
+}
+.code-background{
+    
+    background-color:greysmoke;
+    height:800px;
+    width:400px;
+}
