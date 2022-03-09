@@ -6,7 +6,6 @@ import "./CreateRoom.css";
 import CodeEditor from "./CodeEditor";
 
 function CreateRoom(props) {
-
   let navigate = useNavigate();
   const createContest = () => {
     navigate("/goto");
@@ -14,13 +13,22 @@ function CreateRoom(props) {
 
   return (
     <div className="create">
+      
+  
+        
+          <button  onClick={props.toggle} style={{ borderRadius: "100px",float:'right' }}>
+            X
+          </button>
+        
+    
       Difficulty:
       <select>
         <option>easy</option>
         <option>hard</option>
         <option>medium</option>
       </select>
-      duration:
+     <span>duration:<i class="far fa-clock"></i></span> 
+
       <select>
         <option>10m</option>
         <option>15m</option>
@@ -29,7 +37,6 @@ function CreateRoom(props) {
       questionlink:
       <input type="text" />
       <div className="cancel-button">
-        <button onClick={props.toggle}>cancel</button>
         <button onClick={createContest}>startRoom</button>
       </div>
     </div>

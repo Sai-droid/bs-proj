@@ -25,7 +25,9 @@ const PublicPage = () => {
     <>
      <header className="App-header">
      {toggle && <CreateRoom toggle={ontoggle} />}
-      <button onClick={ontoggle}>create room</button>
+      <button onClick={ontoggle}>
+create room <i class="fa fa-plus-square"></i>
+</button>
       </header>
       
     </>

@@ -10,19 +10,28 @@ function CodeEditor() {
           <h3>question:</h3>
          
         <h3>
-          You are given an array representing a row of seats where seats[i] = 1
-          represents a person sitting in the ith seat, and seats[i] = 0
-          represents that the ith seat is empty (0-indexed). There is at least
-          one empty seat, and at least one person sitting. Alex wants to sit in
-          the seat such that the distance between him and the closest person to
-          him is maximized. Return that maximum distance to the closest person.
+          you are given two integers x and y .add them
         </h3>
+        <div>
+          <h3>output format</h3>
+          <h4>z</h4>
+        </div>
         <div></div>
       </div>
       <div className="code-editor">
+        <span><h2>codeEditor</h2></span>
         <div className="code-background">
           <div>
-            <input
+            <textarea
+            placeholder=" // public class MyClass {
+              public static void main(String args[]) {
+                int x=10;
+                int y=25;
+                int z=x+y;
+          
+                System.out.println(z);
+              }
+          } "
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -33,9 +42,9 @@ function CodeEditor() {
               onChange={(event) => {
                 console.log(event.target.value);
               }}
-            ></input>
+            />
           </div>
-          <button>+</button>
+          <button>run</button>
           <button>submit</button>
         </div>
       </div>
@@ -52,7 +61,9 @@ function CodeEditor() {
             <label>say hi!</label>
             <input type="text"></input>
             <button>send</button>
-            <NavLink exact to ="/" > <button>end</button></NavLink>
+            <NavLink exact to ="/" > <button><i class="fas fa-home"></i>
+
+home</button></NavLink>
           </form>
         </div>
       </div>
